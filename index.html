@@ -11,23 +11,29 @@
 
 <body>
     <header>
-        CSS Cheatsheet
+        CSS cheatsheet
     </header>
     <section class="info">
         <article class="subheader">
-            This is my cheatsheet.
+            css cheatsheet used to create websites with navigation bars and flex-boxes.
         </article>
     </section>
 
     <main class="main-container">
         <article class="topics">
             <section>
-                <h2 class="topic-titles">CSS #1</h2>
-                <p>Info text</p>
+                <h2 class="topic-titles">@media queries</h2>
+                <p>
+                    Add a media query for screens that are less than 768px and need to take up the entire screen width.
+            
+                </p>
                 <pre>
                 <code>
-article{
-    background-color: white;
+@media screen and (max-width:
+768px){
+    .section{
+        width: 100%;
+    }
 }
                 </code>
             </pre>
@@ -36,12 +42,17 @@ article{
 
         <article class="topics">
             <section>
-                <h2 class="topic-titles">CSS #1</h2>
-                <p>Info text</p>
+                <h2 class="topic-titles">flexbox</h2>
+                <p>Create a main container that holds rows of cards within a flexbox.</p>
                 <pre>
                 <code>
-article{
-    background-color: white;
+.main-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: normal;
+    align-items: normal;
+    align-content: normal;
 }
                 </code>
             </pre>
@@ -50,12 +61,23 @@ article{
         
         <article class="topics">
             <section>
-                <h2 class="topic-titles">CSS #1</h2>
-                <p>Info text</p>
+                <h2 class="topic-titles">pseudo-elements</h2>
+                <p>Add a tooltip to hover directly over an element.</p>
                 <pre>
                 <code>
-article{
-    background-color: white;
+.tooltip{
+    text-decoration: underline;
+    position:relative;
+}
+.tooltip:hover::before{
+    content: attr(data=tool-tip);
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 
+    -100%);
+    width:100%;
 }
                 </code>
             </pre>
@@ -64,12 +86,34 @@ article{
         
         <article class="topics">
             <section>
-                <h2 class="topic-titles">CSS #1</h2>
-                <p>Info text</p>
+                <h2 class="topic-titles">CSS selectors</h2>
+                <p>Select every a element whose href attribute begins with "https".
+                Selects the first element that is placed directly after the first element.
+                </p>
                 <pre>
                 <code>
-article{
-    background-color: white;
+a[href^="https"]{
+    background: white;
+}
+div + p {
+    color: white;
+}
+
+                </code>
+            </pre>
+            </section>
+        </article>
+
+        <article class="topics">
+            <section>
+                <h2 class="topic-titles">gradients</h2>
+                <p>Add a gradient as a background image.</p>
+                <pre>
+                <code>
+.classname {
+background-image: 
+linear-gradient(color, color, color, 
+color, etc);
 }
                 </code>
             </pre>
@@ -78,33 +122,32 @@ article{
 
         <article class="topics">
             <section>
-                <h2 class="topic-titles">CSS #1</h2>
-                <p>Info text</p>
+                <h2 class="topic-titles">vertical nav bars</h2>
+                <p>Create a vertical navigation bar.</p>
                 <pre>
                 <code>
-article{
-    background-color: white;
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #f1f1f1;
 }
-                </code>
-            </pre>
-            </section>
-        </article>
-
-        <article class="topics">
-            <section>
-                <h2 class="topic-titles">CSS #1</h2>
-                <p>Info text</p>
-                <pre>
-                <code>
-article{
-    ackground-color: white;
-}
+li a {
+    display: block;
+    padding: 8px 16px;
+    text-decoration: none;
+    }
+li a:hover {
+    background-color: #555;
+    color: white;
+    }
                 </code>
             </pre>
             </section>
         </article>
     <footer>
-This is my footer.
+Magdalena Perry cheatsheet.
 
     </footer>
     </main>
